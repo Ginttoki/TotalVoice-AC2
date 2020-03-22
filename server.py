@@ -3,6 +3,10 @@ from totalvoice.cliente import Cliente
 
 app = Flask(__name__)
 
+@app.route("/")
+def index():
+    return render_template('index.html')
+
 @app.route("/sms/", methods=['GET','POST'])
 def enviar_sms():
     celular = request.form.get('numero')
