@@ -7,26 +7,19 @@
     
 </head>
 
-<script type="text/javascript">
-    function reply_click(clicked_id)
-    {
-        alert(clicked_id);
-    }
-</script>
-
 <body>
   <div id="divCenter">
       <h1 style="color: black;">Envio de SMS</h1>
       <br>
       <form action="{{ url_for('enviar_sms') }}" method="POST">
-          <input type="text" name="numero" id="numero" style="height:20px; width:300px; border-radius:3px;" placeholder="Digite seu numero aqui" minlength="11" maxlength="11">
+          <input type="text" required name="numero" id="numero" style="height:20px; width:300px; border-radius:3px;" placeholder="Digite seu numero aqui" minlength="11" maxlength="11">
           <br>
           <br>
           <!--<textarea type="textarea" name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" style="height:50px;"></textarea> -->
-          <input type="textarea" name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" style="height:100px; width:300px; border-radius:6px;">   
+          <input type="textarea" required name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui" style="height:100px; width:300px; border-radius:6px;">   
           <br>     
           <br>       
-          <button type="submit" style="background-color: black; color: white; border-radius:6px; padding-top: 10px;" class="btn" id="Enviado" onClick="reply_click(this.id)">Enviar SMS</button>
+          <button type="submit" style="background-color: black; color: white; border-radius:6px; padding-top: 10px;" class="btn">Enviar SMS</button>
       </form>
   </div>      
 </body>

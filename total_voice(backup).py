@@ -8,4 +8,3 @@ numero_destino = input('Digite o numero:\n')
 mensagem = input('Digite a mensagem solicitada:\n')
 response = cliente.sms.enviar(numero_destino, mensagem)
 print(response)
-
